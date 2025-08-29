@@ -93,7 +93,7 @@ console.log(`\n A soma dos números positivos é: ${soma}`);
 // QUESTÃO 4 - ARRAYS
 
 
-questao4();
+//questao4();
 
 function questao4(){
 
@@ -127,4 +127,56 @@ console.log(`\n Elementos pares: ${numPares}`);
 console.log(`\n Soma dos elementos do vetor: ${armazenaNumeros.reduce((a,b) => a+b,0)}`)
 
 console.log(`\n A média dos elementos do vetor é: ${media}`);
+}
+
+// QUESTÃO 5 - MATRIZES]
+
+questao5();
+
+function questao5(){
+
+let matrizInteiros = new Array(3);
+
+for (let indiceLinha = 0; indiceLinha < matrizInteiros.length; indiceLinha++){
+    matrizInteiros[indiceLinha] = Array(3);
+}
+
+for (let indiceLinha = 0; indiceLinha < matrizInteiros.length; indiceLinha++){
+
+    for (let indiceColuna = 0; indiceColuna < matrizInteiros.length; indiceColuna++){
+
+      matrizInteiros[indiceLinha][indiceColuna] = leia.questionInt(`Digite o numero do elemento [${indiceLinha}][${indiceColuna}]: `);
+
+    }
+
+}
+
+console.table(matrizInteiros);
+
+let somaDiagonalPrincipal: number = 0;
+let somaDiagonalSecundaria: number = 0;
+
+for (let indiceLinha = 0; indiceLinha < matrizInteiros.length; indiceLinha++){
+    for (let indiceColuna= 0; indiceColuna < matrizInteiros.length; indiceColuna++){
+        if (indiceLinha === indiceColuna){
+            somaDiagonalPrincipal += matrizInteiros[indiceLinha][indiceColuna];
+        }
+        if (indiceLinha + indiceColuna === matrizInteiros.length - 1){
+            somaDiagonalSecundaria += matrizInteiros[indiceLinha][indiceColuna];
+        }
+    }
+}
+
+console.log(`\n Os elementos da diagonal principal são: `);
+for (let i = 0; i < matrizInteiros.length; i++){
+    console.log(matrizInteiros[i][i]);
+}
+console.log(`\n Os elementos da diagonal secundária são: `);
+for (let i = 0; i < matrizInteiros.length; i++){
+    console.log(matrizInteiros[i][matrizInteiros.length - 1 - i]);
+}
+
+console.log(`\n A soma dos elementos da diagonal principal é: ${somaDiagonalPrincipal}`);
+console.log(`\n A soma dos elementos da diagonal secundária é: ${somaDiagonalSecundaria} \n`);
+
 }
