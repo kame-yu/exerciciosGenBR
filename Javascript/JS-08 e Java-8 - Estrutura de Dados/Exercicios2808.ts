@@ -6,7 +6,7 @@ const leia = require('readline-sync');
 
 // QUESTÃO 1 - FILA (QUEUE)
 
-//questao1();
+questao1();
 
 function questao1(){
 const fila = new Queue<String>();

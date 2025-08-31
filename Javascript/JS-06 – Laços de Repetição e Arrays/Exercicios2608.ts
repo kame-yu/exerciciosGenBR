@@ -5,7 +5,7 @@ const leia = require('readline-sync');
 
 
 
-//questao1();
+questao1();
 
 function questao1(){
 
@@ -32,7 +32,7 @@ console.log(`O total de números ímpares é: ${numImpares.length} \n \n`);
 // QUESTÃO 2 - LAÇO REPETIÇÃO WHILE
 
 
-//questao2();
+questao2();
 
 function questao2(){
 
@@ -67,7 +67,7 @@ console.log(`O total de pessoas maiores de 50 anos é: ${maioresCinquenta.length
 
 // QUESTÃO 3 - DO WHILE
 
-//questao3();
+questao3();
 
 function questao3(){
 
@@ -93,7 +93,7 @@ console.log(`\n A soma dos números positivos é: ${soma}`);
 // QUESTÃO 4 - ARRAYS
 
 
-//questao4();
+questao4();
 
 function questao4(){
 
